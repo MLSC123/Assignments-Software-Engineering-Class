@@ -22,18 +22,61 @@
                 <img src="./assets/ucr-image.png" alt="selfie"/>
             </div>
         </div>
+        <div class="buttonsCarousel">
+            <button class="greenButton" onclick="handleLeft()">Left</button>
+            <button class="greenButton" onclick="handleRight()">Right</button>
+        </div>
         
-
         <div class="card-description">
             <h2> Lisandro Sandi</h2>
             <h3> Descripción </h3>
             <p> Estudiante de Ciencias de la Computación, soy de la provincia de Puntarenas, mis pasatiempos son jugar videojuegos y
                 salir a caminar, me gusta bastante el tema web en general y mi comida preferida son los camarones. </p>
         </div>
+        <div class="moreInterestsContainer">
+            <h3 id="moreInterests">Mas intereses</h3>
+        </div>
+
+
+        <form class="form" onsubmit="">
+            <div class="form-body">
+                <h3>Formulario de contacto</h3>
+                <label class="labelText" for="inputName">Nombre y apellido:</label> <br>
+                <input type="text" id="inputName" name="inputName" placeholder="Juan Perez" required/> <br>
+                
+                <label class="labelText" for="inputNumber">Telefono</label> <br>
+                <input type="number" id="inputNumber" name="inputNumber" placeholder="12345678" required/> <br>
+    
+                <label class="labelText" for="inputConsultation">Razon de contacto:</label> <br>
+                <textarea type="text" id="inputConsultation" name="inputConsultation" required></textarea>
+            </div>
+
+
+            <button class="greenButton" onclick="return validateForm()">
+                Enviar
+            </button>
+        </form>
+
+        <div class="aboutU">
+            <button class="grayButton" onclick="return handleU()">Universidad</button>
+            <div class="toggle">
+                <p>Actualmente estudio en la Universidad de Costa Rica, una de las
+                    más prestigiosas de Latinoamerica. Actualmente tengo más del 50% de la
+                    carrera aprobada, mis clases favoritas han sido:
+                    <ul>
+                        <li>Sistemas Operativos</li>
+                        <li>Redes</li>
+                        <li>Programación paralela y concurrente</li>
+                    </ul>
+                </p>
+                <button class="hideAboutU" onclick="return hideAboutU()">Hide</button>
+            </div>
+        </div>
+
         
         <div class="card-footer">
             <footer>
-                <h3>Datos de contacto</h3>
+                <h3>Otros datos para contactarme</h3>
 
                 <p>marvin.sandi@ucr.ac.cr</p>
                 <p>+506 7183 8355</p>
@@ -49,6 +92,31 @@
         
         
     </div>
+
+    <div class="modal">
+        
+        <div class="list">
+            <div class="listItem">
+                <h4>Peliculas favoritas</h4>
+                <ul>
+                    <li>Batman: El caballero de la noche</li>
+                    <li>The Joker</li>
+                    <li>El lobo de Wall Street</li>
+                </ul>
+            </div>
+            <div class="listItem">
+                <h4>Canciones favoritas</h4>
+                <ul>
+                    <li>Is There Someone Else? - The Weeknd</li>
+                    <li>Tranquility Base Hotel And Casino - Arctic Monkeys</li>
+                    <li>I Wanna Be Yours - Arctic Monkeys</li>
+                </ul>
+            </div>
+            <button class="redButton" onclick="handleHide()">Hide</button>
+        </div>
+        
+    </div>
+    
     <script src="./app.js" ></script>
 </body>
 
